@@ -3,6 +3,7 @@
 
 #include <string.h>
 #include <stdio.h>
+#include <signal.h>
 
 /* XDCtools Header files */
 #include <xdc/runtime/Error.h>
@@ -19,6 +20,11 @@
 
 /* I2C Header file */
 #include "i2c.h"
+
+#define LED_OFF 0
+#define LED_BLINK 1
+#define LED_STABLE 2
+sig_atomic_t led_status;
 
 float Orp, Ph, Do, temp, elec;
 

@@ -6,7 +6,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="${build_artifact:WaterQualitySensor_EK_TM4C1294XL_updated}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="WaterQualitySensor_EK_TM4C1294XL_updated"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:WaterQualitySensor_EK_TM4C1294XL_updated}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="C:/Users\joseph\workspace_v7\WaterQualitySensor_EK_TM4C1294XL_updated\Debug\WaterQualitySensor_EK_TM4C1294XL_updated.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="/home/adam/workspace_v7/WaterQualitySensor_EK_TM4C1294XL_updated/Debug/WaterQualitySensor_EK_TM4C1294XL_updated.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/WaterQualitySensor_EK_TM4C1294XL_updated"/>
 </listAttribute>

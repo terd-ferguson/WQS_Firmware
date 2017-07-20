@@ -13,10 +13,6 @@
 char buffer[1024];
 char bufferlen[5];
 
-uint8_t test[20], j;
-
-bool flag101 = 0;
-
 HTTPCli_Struct cli;
 
 /*
@@ -36,10 +32,7 @@ void sendUpdate()
     int len;
 
     //Call to get new values
-    flag101=1;
-    test[0]=0;
     updateValues();
-    test[1]=0;
 
     System_printf("Sending a HTTP PUT request to '%s'\n", HOSTNAME);
     System_flush();
@@ -147,11 +140,6 @@ void netIPAddrHook(unsigned int IPAddr, unsigned int IfIdx, unsigned int fAdd)
     static Task_Handle taskHandle;
     Task_Params taskParams;
     Error_Block eb;
-
-    for(j=0;j<20;j++)
-    {
-        test[j]=1;
-    }
 
     /* Create a HTTP task when the IP address is added */
     if (fAdd && !taskHandle) {

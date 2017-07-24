@@ -4,7 +4,7 @@ This Firmware implements TI's **EK-TM4C1294XL** with Atlas Scientific's sensors 
 ### Dependencies
 Latest version of CCS http://processors.wiki.ti.com/index.php/Download_CCS
 
-TI-RTOS
+TI-RTOS for Tiva C
 
 InfluxDB, Chronograf https://portal.influxdata.com/downloads
 

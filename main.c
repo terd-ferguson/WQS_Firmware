@@ -8,8 +8,9 @@ int main(void)
     Board_initI2C();
     Board_initEMAC();
 
-    /* Turn on user LED */
-    GPIO_write(Board_LED0, Board_LED_ON);
+    /* Start Status LED */
+    led_status = LED_BLINK;
+    startLed();
 
     /* Start BIOS */
     BIOS_start();

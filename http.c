@@ -120,6 +120,8 @@ Void httpTask(UArg arg0, UArg arg1)
     System_printf("Connected to '%s'\n", HOSTNAME);
     System_flush();
 
+    led_status = LED_STABLE;
+
     //this will get modified later to handle drops and such
     while (1)
     {

@@ -30,4 +30,6 @@ float Orp, Ph, Do, temp, elec;
 
 Void updateValues();
 
+Void startLed();
+
 #endif

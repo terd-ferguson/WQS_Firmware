@@ -8,6 +8,9 @@ int main(void)
     Board_initI2C();
     Board_initEMAC();
 
+    /*Check Debug Input Status*/
+    checkDebug();
+
     /* Start Status LED */
     led_status = LED_BLINK;
     startLed();

@@ -297,6 +297,17 @@ GPIO_PinConfig gpioPinConfigs[] = {
     GPIOTiva_PN_1 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
     /* EK_TM4C1294XL_USR_D2 */
     GPIOTiva_PN_0 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
+
+    /* EK_TM4C1294XL_USR_E0 */
+    GPIOTiva_PE_0 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
+    /* EK_TM4C1294XL_USR_E1 */
+    GPIOTiva_PE_1 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
+    /* EK_TM4C1294XL_USR_E2 */
+    GPIOTiva_PE_2 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
+    /* EK_TM4C1294XL_USR_E3 */
+    GPIOTiva_PE_3 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
+    /* EK_TM4C1294XL_USR_E4 */
+    GPIOTiva_PE_4 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_HIGH | GPIO_CFG_OUT_LOW,
 };
 
 /*
@@ -709,6 +720,14 @@ unsigned char uartTivaRingBuffer[EK_TM4C1294XL_UARTCOUNT][32];
 /* UART configuration structure */
 const UARTTiva_HWAttrs uartTivaHWAttrs[EK_TM4C1294XL_UARTCOUNT] = {
     {
+        .baseAddr = UART3_BASE,
+        .intNum = INT_UART3,
+        .intPriority = (~0),
+        .flowControl = UART_FLOWCONTROL_NONE,
+        .ringBufPtr  = uartTivaRingBuffer[0],
+        .ringBufSize = sizeof(uartTivaRingBuffer[0])
+    },
+    {
         .baseAddr = UART0_BASE,
         .intNum = INT_UART0,
         .intPriority = (~0),
@@ -716,6 +735,7 @@ const UARTTiva_HWAttrs uartTivaHWAttrs[EK_TM4C1294XL_UARTCOUNT] = {
         .ringBufPtr  = uartTivaRingBuffer[0],
         .ringBufSize = sizeof(uartTivaRingBuffer[0])
     }
+
 };
 
 const UART_Config UART_config[] = {
@@ -723,6 +743,11 @@ const UART_Config UART_config[] = {
         .fxnTablePtr = &UARTTiva_fxnTable,
         .object = &uartTivaObjects[0],
         .hwAttrs = &uartTivaHWAttrs[0]
+    },
+    {
+        .fxnTablePtr = &UARTTiva_fxnTable,
+        .object = &uartTivaObjects[1],
+        .hwAttrs = &uartTivaHWAttrs[1]
     },
     {NULL, NULL, NULL}
 };
@@ -738,6 +763,18 @@ void EK_TM4C1294XL_initUART(void)
     GPIOPinConfigure(GPIO_PA0_U0RX);
     GPIOPinConfigure(GPIO_PA1_U0TX);
     GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+//
+//    /* Initialize the UART driver */
+//#if TI_DRIVERS_UART_DMA
+//    EK_TM4C1294XL_initDMA();
+//#endif
+//    UART_init();
+
+    /* Enable and configure the peripherals used by the uart. */
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART3);
+    GPIOPinConfigure(GPIO_PA4_U3RX);
+    GPIOPinConfigure(GPIO_PA5_U3TX);
+    GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_4 | GPIO_PIN_5);
 
     /* Initialize the UART driver */
 #if TI_DRIVERS_UART_DMA

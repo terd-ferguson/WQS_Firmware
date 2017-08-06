@@ -80,12 +80,20 @@ extern "C" {
 #define Board_USBHOST               EK_TM4C1294XL_USBHOST
 #define Board_USBDEVICE             EK_TM4C1294XL_USBDEVICE
 
-#define Board_UART0                 EK_TM4C1294XL_UART0
-
 #define Board_WATCHDOG0             EK_TM4C1294XL_WATCHDOG0
 
 #define Board_WIFI                  EK_TM4C1294XL_WIFI
 #define Board_WIFI_SPI              EK_TM4C1294XL_SPI2
+
+#define Board_UART0                 EK_TM4C1294XL_UART0
+#define Board_UART3                 EK_TM4C1294XL_UART3
+
+#define PE0                         EK_TM4C1294XL_E0
+#define PE1                         EK_TM4C1294XL_E1
+#define PE2                         EK_TM4C1294XL_E2
+#define PE3                         EK_TM4C1294XL_E3
+#define PE4                         EK_TM4C1294XL_E4
+#define PE5                         EK_TM4C1294XL_E5
 
 /* Board specific I2C addresses */
 #define Board_TMP006_ADDR           (0x40)

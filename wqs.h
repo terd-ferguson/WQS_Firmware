@@ -18,8 +18,8 @@
 /* Board Header file */
 #include "Board.h"
 
-/* I2C Header file */
-#include "i2c.h"
+/* UART Header file */
+#include "uart.h"
 
 #define LED_OFF 0
 #define LED_BLINK 1

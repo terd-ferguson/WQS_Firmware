@@ -2,8 +2,8 @@
 
 #include <sys/socket.h>
 
-#define HOSTNAME          /*"192.168.1.4:8086"*/ "192.168.1.237:8086"
-#define REQUEST_URI       /*"/write?db=mydb"*/ "/write?db=db"
+#define HOSTNAME          "192.168.1.4:8086" /*"192.168.1.237:8086"*/
+#define REQUEST_URI       "/write?db=mydb" /*"/write?db=db"*/
 #define USER_AGENT        "Nectar WQN"
 #define CONTENT_TYPE      "application/x-www-form-urlencode"
 #define SENSOR            "WQN_input"
@@ -21,7 +21,7 @@ HTTPCli_Struct cli;
 void printError(char *errString, int code)
 {
     System_printf("Error! code = %d, desc = %s\n", code, errString);
-    BIOS_exit(0);
+    //BIOS_exit(0);
 }
 
 void sendUpdate()
@@ -32,7 +32,7 @@ void sendUpdate()
     int len;
 
     //Call to get new values
-    updateValues();
+    (*activeUpdateValues)();
 
     System_printf("Sending a HTTP PUT request to '%s'\n", HOSTNAME);
     System_flush();

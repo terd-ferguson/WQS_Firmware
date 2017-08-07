@@ -8,6 +8,9 @@ int main(void)
     Board_initUART();
     Board_initEMAC();
 
+    /*Check Debug Input Status*/
+    checkDebug();
+
     uart0_config();
     uart3_config();
 

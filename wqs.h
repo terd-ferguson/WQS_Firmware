@@ -29,7 +29,12 @@ sig_atomic_t led_status;
 float Orp, Ph, Do, temp, elec;
 
 Void updateValues();
+Void debugUpdateValues();
+
+Void(*activeUpdateValues)();
 
 Void startLed();
+
+Void checkDebug();
 
 #endif

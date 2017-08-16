@@ -37,8 +37,6 @@ uint8_t UV[] = { '*', 'U', 'V' };
 uint8_t OV[] = { '*', 'O', 'V' };
 uint8_t OK[] = { '*', 'O', 'K' };
 
-//float temp=0, Orp=0, elec=0, Do=0, Ph=0;
-
 //struct error_flags {
 //    volatile sig_atomic_t timeout;
 //    volatile sig_atomic_t er;

@@ -1163,45 +1163,6 @@ void device_status(uint8_t cs)
     }
 }
 
-//bool baud_check(uint8_t cs)
-//{
-//    bool temp;
-//    switch(cs){
-//    case 1:
-//        if(RTD.baudChange==1)
-//            temp=1;
-//        else
-//            temp=0;
-//        break;
-//    case 2:
-//        if(ORP.baudChange==1)
-//            temp=1;
-//        else
-//            temp=0;
-//        break;
-//    case 3:
-//        if(EC.baudChange==1)
-//            temp=1;
-//        else
-//            temp=0;
-//        break;
-//    case 4:
-//        if(DO.baudChange==1)
-//            temp=1;
-//        else
-//            temp=0;
-//        break;
-//    case 5:
-//        if(pH.baudChange==1)
-//            temp=1;
-//        else
-//            temp=0;
-//        break;
-//    }
-//
-//    return temp;
-//}
-
 void clear_errors(uint8_t cs)
 {
     clear_er(cs);

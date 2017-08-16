@@ -12,7 +12,7 @@ int main(void)
     checkDebug();
 
     uart0_config();
-    uart3_config();
+    uart3_config(1000, 115200);
 
     /* Start Status LED */
     led_status = LED_BLINK;
@@ -23,6 +23,3 @@ int main(void)
 
     return (0);
 }
-
-
-

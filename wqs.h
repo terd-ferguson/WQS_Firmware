@@ -30,6 +30,7 @@ float Orp, Ph, Do, temp, elec;
 
 Void updateValues();
 Void debugUpdateValues();
+Void calibrationMode();
 
 Void(*activeUpdateValues)();
 

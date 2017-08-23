@@ -1,0 +1,185 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Circuitry &#8212; Water Quality Sensor 0.2.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Building your project" href="build.html" />
+    <link rel="prev" title="Putty" href="putty.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <a class="reference internal image-reference" href="_images/nectar.png"><img alt="_images/nectar.png" class="align-right" src="_images/nectar.png" style="width: 144.0px; height: 144.0px;" /></a>
+<div class="section" id="circuitry">
+<h1>Circuitry<a class="headerlink" href="#circuitry" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="mcu-wiring">
+<h2>MCU wiring<a class="headerlink" href="#mcu-wiring" title="Permalink to this headline">¶</a></h2>
+<p>Shown below is a diagram of how to connect the <strong>EK-TM4C1294XL</strong>
+to the Atlas Scientific <strong>8:1 Serial Port Expander</strong>.</p>
+<img alt="_images/wiring_diagram.png" src="_images/wiring_diagram.png" />
+<p>Note that this diagram is not accurate for the <strong>Oxidation
+Reduction Potential</strong>, <strong>Electroconductivity</strong>, <strong>Dissolved
+Oxygen</strong>, and <strong>pH</strong> modules. Although the <strong>Temperature</strong>
+sensor can be directly connected, it is recommended to buffer
+the other sensors to the <strong>8:1 Serial Port Expander</strong> with the
+Atlas Scientific <strong>Inline Voltage Isolators</strong>.</p>
+<p>Also, with the code provided, only five modlues will work at a
+time and must be connected to ports 1-5 on the <strong>Serial Port Expander</strong></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="ezo-wiring">
+<h2>EZO wiring<a class="headerlink" href="#ezo-wiring" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/iso_wiring.png" class="align-left" src="_images/iso_wiring.png" />
+<p>The EZO’s are wired between the ISO circuits and the BNC connectors.
+More information for wiring Atlas Scientific devices can be found at
+the given link: <a class="reference external" href="https://www.atlas-scientific.com">https://www.atlas-scientific.com</a></p>
+<hr class="docutils" />
+<p><em>Up Next:</em></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="build.html">Building your project</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Water Quality Sensor</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dependencies.html">Dependencies</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tutorial.html">Tutorial</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="EK-TM4C1294XL.html">EK-TM4C1294XL</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="Sensors.html">Sensors</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="router.html">Router</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="CCS.html">CCS</a><ul class="current">
+<li class="toctree-l6 current"><a class="reference internal" href="InfluxDB.html">InfluxDB</a><ul class="current">
+<li class="toctree-l7 current"><a class="reference internal" href="chronograf.html">Chronograf</a><ul class="current">
+<li class="toctree-l8 current"><a class="reference internal" href="putty.html">Putty</a><ul class="current">
+<li class="toctree-l9 current"><a class="current reference internal" href="#">Circuitry</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="build.html">Building your project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="dependencies.html">Dependencies</a><ul>
+  <li><a href="tutorial.html">Tutorial</a><ul>
+  <li><a href="EK-TM4C1294XL.html">EK-TM4C1294XL</a><ul>
+  <li><a href="Sensors.html">Sensors</a><ul>
+  <li><a href="router.html">Router</a><ul>
+  <li><a href="CCS.html">CCS</a><ul>
+  <li><a href="InfluxDB.html">InfluxDB</a><ul>
+  <li><a href="chronograf.html">Chronograf</a><ul>
+  <li><a href="putty.html">Putty</a><ul>
+      <li>Previous: <a href="putty.html" title="previous chapter">Putty</a></li>
+      <li>Next: <a href="build.html" title="next chapter">Building your project</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, joseph forrest.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/circuitry.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

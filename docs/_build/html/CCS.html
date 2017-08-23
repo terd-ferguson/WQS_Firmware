@@ -1,0 +1,196 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CCS &#8212; Water Quality Sensor 0.2.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="InfluxDB" href="InfluxDB.html" />
+    <link rel="prev" title="Router" href="router.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <a class="reference internal image-reference" href="_images/nectar.png"><img alt="_images/nectar.png" class="align-right" src="_images/nectar.png" style="width: 144.0px; height: 144.0px;" /></a>
+<div class="section" id="ccs">
+<h1>CCS<a class="headerlink" href="#ccs" title="Permalink to this headline">¶</a></h1>
+<p>As mentioned before, the backbone of the project is the
+EK-TM4C1294XL. To bring this device to life we will use
+code composer studio. The latest version of CCS can be
+downloaded via the following link. Be sure to use one of
+the latest versions as pictured below.</p>
+<hr class="docutils" />
+<img alt="_images/ccs.png" src="_images/ccs.png" />
+<p><a class="reference external" href="http://processors.wiki.ti.com/index.php/Download_CCS">http://processors.wiki.ti.com/index.php/Download_CCS</a></p>
+<p>-When selecting processor support, select the box starting with
+<strong>TM4C12x</strong></p>
+<img alt="_images/processor_support.png" src="_images/processor_support.png" />
+<hr class="docutils" />
+<div class="section" id="ccs-dependencies">
+<h2>CCS dependencies<a class="headerlink" href="#ccs-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>For this project we will be using TI’s real time operating
+system, tivaware C series, and a couple other software packages.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="ti-rtos">
+<h2>TI-RTOS<a class="headerlink" href="#ti-rtos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>first open code composer studio(CCS)</li>
+<li>Select <strong>View</strong> -&gt; <strong>Resource Explorer</strong></li>
+</ul>
+<img alt="_images/resource_exp.png" src="_images/resource_exp.png" />
+<hr class="docutils" />
+<ul class="simple">
+<li>In the right most panel, scroll down to TI-RTOS for Tiva C and click <strong>Download and Install</strong></li>
+</ul>
+<img alt="_images/tirtos.png" src="_images/tirtos.png" />
+</div>
+<hr class="docutils" />
+<div class="section" id="tivaware">
+<h2>Tivaware<a class="headerlink" href="#tivaware" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>In the left window of the resource explorer, select <strong>software</strong> and click on the package starting with TM4C Arm Cortex</li>
+<li>In the right window, click <strong>Download and Install</strong></li>
+</ul>
+<img alt="_images/tivaware.png" src="_images/tivaware.png" />
+<ul class="simple">
+<li>after the installation completes, restart CCS</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="other-packages">
+<h2>Other packages<a class="headerlink" href="#other-packages" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Once CCS has successfully restarted, the remaining packages to be installed should appear</li>
+<li>Click <strong>Install</strong></li>
+</ul>
+</div></blockquote>
+<img alt="_images/packages.png" src="_images/packages.png" />
+<hr class="docutils" />
+<p><em>Up Next:</em></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="InfluxDB.html">InfluxDB</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Water Quality Sensor</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dependencies.html">Dependencies</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tutorial.html">Tutorial</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="EK-TM4C1294XL.html">EK-TM4C1294XL</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="Sensors.html">Sensors</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="router.html">Router</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">CCS</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="InfluxDB.html">InfluxDB</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="dependencies.html">Dependencies</a><ul>
+  <li><a href="tutorial.html">Tutorial</a><ul>
+  <li><a href="EK-TM4C1294XL.html">EK-TM4C1294XL</a><ul>
+  <li><a href="Sensors.html">Sensors</a><ul>
+  <li><a href="router.html">Router</a><ul>
+      <li>Previous: <a href="router.html" title="previous chapter">Router</a></li>
+      <li>Next: <a href="InfluxDB.html" title="next chapter">InfluxDB</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, joseph forrest.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/CCS.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
